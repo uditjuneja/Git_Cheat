@@ -1,0 +1,15 @@
+area program, code, readonly
+entry
+LDR R0,value1
+LDR R1,value2
+MOV R2,R1
+MOV R3,#0X01
+LOOP
+ADD R3,#0X01
+ADD R2,R1
+CMP R3,R0
+BNE LOOP
+area program,data,readonly
+value1 DCD &00000005
+value2 DCD &00000006
+END

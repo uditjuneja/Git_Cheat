@@ -1,0 +1,13 @@
+    area program, code, readonly
+entry
+    LDR R0,=string
+    MOV R2,#0x00
+LOOP
+    LDRB R1,[R0],#0x01
+    CMP R1,#0x00
+    ADDNE R2,R2,#0x01
+    BNE LOOP
+    SWI&11
+area program,data,readonly
+string DCB "ABCDEF"
+END

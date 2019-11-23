@@ -1,0 +1,11 @@
+AREA program,CODE,READONLY
+      ENTRY
+      MOV R0,#0x12345678  ; Register Rd
+      MOV R1,#1F          ; Counter register
+label MOVS R0,R0,LSR #1   ; Logical right shift of number
+      ADDCS R3,R3,#1      ; R3 holds number of ones
+      ADDCC R4,R4,#1      ; R4 holds number of zeros
+      SUB R1,R1,#1        ; decrementing counter value
+      CMP R1,#00
+      BNE label
+      END

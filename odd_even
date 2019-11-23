@@ -1,0 +1,8 @@
+area program, code, readonly
+entry
+LDR R1,value1
+MOV R2, #0X01
+AND R3,R1,R2
+area program,data,readonly
+value1 DCD &00000004
+END

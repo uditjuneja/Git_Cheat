@@ -1,0 +1,13 @@
+area program, code, readonly
+entry
+LDR R0,value1
+MOV R1,#0X01
+LOOP
+MUL R2,R1,R0
+MOV R1,R2
+SUB R0,R0,#0X01
+CMP R0,#0X01
+BGT LOOP
+area program,data,readonly
+value1 DCD &00000004
+END

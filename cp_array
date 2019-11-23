@@ -1,0 +1,16 @@
+area program, code, readonly
+entry
+LDR R0,=arr
+MOV R4,#0x04
+LDR R5,val
+LOOP
+LDRB R2,[R0],#0x01
+STRB R2,[R5],#0x01
+SUB R4,R4,#0x01
+CMP R4,#0x00
+BNE LOOP
+SWI&11
+area program,data,readonly
+arr DCB 1,2,3,4
+val DCD &10000080
+END

@@ -2,6 +2,25 @@ Raw Link -
 https://raw.githubusercontent.com/uditjuneja/Git_Cheat/master/<filename>
 
 filename -
+add_64
+add_str
+ax2
+count_char
+cp_array
+div_sub
+fact
+index
+indirect
+lar_array
+len_str
+lsl
+mul_table
+mul_using_add
+no_bytes
+odd_even
+one_zero_count
+x_y_6
+
 2d.cu
 basic_add.cu
 bitonic_1.cu

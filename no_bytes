@@ -1,0 +1,15 @@
+area program, code, readonly
+entry
+main
+MOV R1,#0x00000070
+MOV R2,#0x00000090
+MOV R3,#0x00000000
+LOOP
+LDRB R4,[R1],#1
+CMP R4,#0xAC
+ADDEQ R3,R3,#1
+CMP R1,R2
+BNE LOOP
+SWI&11
+area program,data,readonly
+END
